@@ -167,8 +167,8 @@ SSL_SESSION *SSL_get1_session(SSL *);
 int SSL_set_session(SSL *, SSL_SESSION *);
 SSL *SSL_new(SSL_CTX *);
 void SSL_free(SSL *);
-+int SSL_CTX_dane_enable(SSL_CTX *);
-+int SSL_dane_enable(SSL *, const char *);
+int SSL_CTX_dane_enable(SSL_CTX *);
+int SSL_dane_enable(SSL *, const char *);
 int SSL_dane_tlsa_add(SSL *, uint8_t, uint8_t, uint8_t,
                       unsigned const char *, size_t);
 int SSL_get0_dane_tlsa(SSL *, uint8_t *, uint8_t *,
